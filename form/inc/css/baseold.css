@@ -1,0 +1,482 @@
+@charset "UTF-8";
+
+/*-------------------------------------------------------------
+
+
+
+このファイルはSASSによって生成されています。
+
+このファイルに手を加える場合は、サイトマスターに確認し、
+
+.scssファイルからコンパイルし直してください。
+
+
+
+---------------------------------------------------------------*/
+
+@import "//fonts.googleapis.com/css?family=Source+Sans+Pro";
+
+@import url(../pfw/css/font-awesome/font-awesome.min.css);
+
+@import "//fonts.googleapis.com/css?family=Lora:400,400italic,700,700italicc";
+
+.page_wrap {
+
+  width: 1024px;
+
+  margin: 0 auto;
+
+}
+
+
+
+/*------------------------------
+
+レイアウト定義
+
+------------------------------*/
+
+#container {
+
+  position: relative;
+
+}
+
+
+
+.content-inner {
+
+  width: 1024px;
+
+  margin: auto;
+
+}
+
+
+
+#header {
+
+  height: 105px;
+
+  padding-top: 30px;
+
+  position: relative;
+
+  z-index: 10;
+
+  padding-left: 5%;
+
+}
+
+#header::after {
+
+  clear: both;
+
+  content: "";
+
+  display: table;
+
+}
+
+#header #logo {
+
+  float: left;
+
+}
+
+#header #logo img {
+
+  width: 110px;
+
+  height: auto;
+
+}
+
+#header #gnavi li a {
+
+  color: #333;
+
+  font-weight: bold;
+
+}
+
+#header #gnavi li.current a {
+
+  color: #35649d;
+
+}
+
+
+
+#gnavi {
+
+  float: left;
+
+}
+
+#gnavi li {
+
+  display: inline-block;
+
+  margin-right: 10px;
+
+}
+
+
+
+#totop {
+
+  text-align: center;
+
+}
+
+#totop a {
+
+  border: 3px solid #666;
+
+  padding: 4px 7px;
+
+  border-radius: 50%;
+
+  width: 48px;
+
+  color: #000;
+
+}
+
+
+
+#footer {
+
+  padding-top: 40px;
+
+}
+
+#footer::after {
+
+  clear: both;
+
+  content: "";
+
+  display: table;
+
+}
+
+#footer a {
+
+  color: #8c8c8c;
+
+}
+
+#footer .footer-left {
+
+  float: left;
+
+}
+
+#footer .footer-left .logo img {
+
+  width: 340px;
+
+  height: auto;
+
+}
+
+#footer .footer-right {
+
+  float: right;
+
+}
+
+#footer .content-inner ul {
+
+  margin: 4px 0;
+
+}
+
+#footer .content-inner ul li {
+
+  font-size: 76%;
+
+  float: right;
+
+  padding-right: 0.5em;
+
+}
+
+#footer .content-inner ul li:after {
+
+  content: "|";
+
+  padding-left: 0.5em;
+
+}
+
+#footer .content-inner ul li:first-child:after {
+
+  display: none;
+
+}
+
+#footer .footer-copyright {
+
+  text-align: right;
+
+}
+
+#footer .footer-copyright::after {
+
+  clear: both;
+
+  content: "";
+
+  display: table;
+
+}
+
+#footer .footer-copyright ul {
+
+  display: inline-block;
+
+}
+
+#footer .footer-copyright ul li {
+
+  display: inline-block;
+
+}
+
+#footer .footer-copyright a {
+
+  color: #333;
+
+}
+
+
+
+table.tbl_style {
+
+  width: 100%;
+
+}
+
+table.tbl_style th {
+
+  text-align: left;
+
+  width: 40%;
+
+  text-align: center;
+
+  vertical-align: middle;
+
+  background: #1a4f8f;
+
+  color: #fff;
+
+}
+
+table.tbl_style th, table.tbl_style td {
+
+  border: 1px solid #e5e5e5;
+
+  padding: 16px;
+
+}
+
+
+
+.btn_area {
+
+  padding: 30px 0;
+
+}
+
+.btn_area.center {
+
+  text-align: center;
+
+}
+
+
+
+.btn {
+
+  padding: 15px 30px;
+
+  font-weight: bold;
+
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+  background: #eee;
+
+  border: 2px solid #eee;
+
+  color: #000 !important;
+
+  display: inline-block;
+
+}
+
+.btn:hover {
+
+  background: #333;
+
+  color: #fff !important;
+
+}
+
+.btn.point {
+
+  color: #fff !important;
+
+  border: 2px solid #1a4f8f;
+
+  background: #1a4f8f;
+
+}
+
+.btn.point:hover {
+
+  color: #1a4f8f !important;
+
+  background: #fff;
+
+}
+
+.btn.small {
+
+  padding: 8px 30px;
+
+  font-size: 90%;
+
+  background: #f1f1f1;
+
+}
+
+.btn.small:hover {
+
+  background: #333;
+
+}
+
+
+
+dl.side_by_side::after {
+
+  clear: both;
+
+  content: "";
+
+  display: table;
+
+}
+
+dl.side_by_side dt {
+
+  width: 225px;
+
+  float: left;
+
+  padding: 6px;
+
+}
+
+dl.side_by_side dd {
+
+  margin-left: 225px;
+
+  text-align: left;
+
+  padding: 6px;
+
+}
+
+
+
+.category {
+
+  text-align: center;
+
+  background: #ccc;
+
+  padding: 3px;
+
+  font-size: 75%;
+
+  width: 100px;
+
+  display: inline-block;
+
+  color: #fff;
+
+  margin: 0 .6em;
+
+}
+
+.category.press {
+
+  background: #7dbcda;
+
+}
+
+.category.news {
+
+  background: #266bab;
+
+}
+
+
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+
+
+body {
+
+  color: #333;
+
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+  line-height: 1.5;
+
+  font-style: normal;
+
+  font-size: 16px;
+
+}
+
+
+
+@font-face {
+
+  font-family: 'Rmplus-bold';
+
+  src: url("/inc/fonts/Rmplus-bold.eot");
+
+  /* IE9 Compat Modes */
+
+  src: url("/inc/fonts/Rmplus-bold.eot?#iefix") format("embedded-opentype"), url("/inc/fonts/Rmplus-bold.woff") format("woff"), url("/inc/fonts/Rmplus-bold.ttf") format("truetype"), url("/inc/fonts/Rmplus-bold.svg#svgFontName") format("svg");
+
+  /* Legacy iOS */
+
+  font-weight: normal;
+
+  font-style: normal;
+
+}
+
+h1, h2, h3, h4, h5 {
+
+  margin-bottom: 20px;
+
+}
+
+
+
+/*# sourceMappingURL=base.css.map */
+

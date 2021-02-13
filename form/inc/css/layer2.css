@@ -1,0 +1,44 @@
+.page_wrap {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+#topicspath ul {
+  margin: 10px 0;
+}
+
+#topicspath ul li {
+  display: inline-block;
+  font-size: 85%;
+}
+
+#topicspath ul li :after {
+  content: ">";
+  margin: 0 5px;
+}
+
+#container #contents {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+h1 {
+  padding: 100px 0 0 0;
+  letter-spacing: 2px;
+  background: #ccc;
+  text-align: center;
+  height: 190px;
+  width: 100%;
+  margin: 0;
+  line-height: 1.2;
+}
+
+h1 span {
+  font-family: 'Lora', serif;
+  display: block;
+  font-size: 180%;
+}
+
+h1 strong {
+  font-size: 70%;
+}
