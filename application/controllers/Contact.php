@@ -84,18 +84,17 @@ class Contact extends CI_Controller {
 		if($this->upload->do_upload('csv')) {
 			$data = $this->upload->data();
 		
-		$csv=$data['full_path'];
-		$handle = fopen($csv,"r");
-	
-		while (($row = fgetcsv($handle, 10000, ",")) != FALSE) //get row vales
-		{
-			$arr['firstCol']=$row[0];
-			$arr['secondCol']=str_replace($replaceTextFrom,$replaceTextTo,$row[1]);
-			$arrCsv[] = $arr;
+			$csv=$data['full_path'];
+			$handle = fopen($csv,"r");
+		
+			while (($row = fgetcsv($handle, 10000, ",")) != FALSE) //get row vales
+			{
+				$arr['firstCol']=$row[0];
+				$arr['secondCol']=str_replace($replaceTextFrom,$replaceTextTo,$row[1]);
+				$arrCsv[] = $arr;
 
+			}
 		}
-	}
-
 
 		 $filepath=$this->_upload_dir."/article_".date('Y-m-d').".csv";
 		 array_to_csv($feed_array,'',$filepath);
@@ -108,7 +107,7 @@ class Contact extends CI_Controller {
 
 	}
 
-	public function downloadArticleFile($csv='result'){
+	public function downloadArticleFile($csv = 'result'){
 		
 		$filepath = $this->_upload_dir.$csv."_".date('Y-m-d').".csv";
 		ob_start();

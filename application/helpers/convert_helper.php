@@ -3,7 +3,6 @@
 if ( ! function_exists('array_to_csv'))
 {
     function array_to_csv($array, $download = "", $path ='')
-    
     {
     
         if ($download != "")
@@ -17,8 +16,7 @@ if ( ! function_exists('array_to_csv'))
         $n = 0;        
         foreach ($array as $line)
         {
-            $n++;
-		
+            $n++;	
             if ( ! fputcsv($f, $line))
             {
                 show_error("Can't write line $n: $line");
