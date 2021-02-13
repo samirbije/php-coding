@@ -35,22 +35,30 @@ if ( ! function_exists('array_to_csv'))
     }
 }
 
-function convert_rss_array($url){
-    $url ='http://www.npr.org/rss/rss.php?id=1001';
+if ( ! function_exists('convert_rss_array')){
+
+    function convert_rss_array($url){
 			$feed = new DOMDocument;
 			$feed->load($url);
 			$feed_array = array();
 	
 			foreach($feed->getElementsByTagName('item') as $story){
+                $titleOriginal = $story->getElementsByTagName('title')->item(0)->nodeValue;
+                $title = strlen($titleOriginal) > 10 ? trim($titleOriginal) : $titleOriginal;
+
+                $descriptionOriginal = $story->getElementsByTagName('description')->item(0)->nodeValue;
+                $description = strlen($descriptionOriginal) > 10 ? trim($descriptionOriginal) : $descriptionOriginal;
+
 				$story_array = array (
-									  'title' => trim($story->getElementsByTagName('title')->item(0)->nodeValue),
-									  'desc' => $story->getElementsByTagName('description')->item(0)->nodeValue,
+                    'title' => $title,
+                    'desc' => $description,
 								
 				);
 	
 				array_push($feed_array, $story_array);
             }
             return $feed_array;
+    }
 }
 ?>
 

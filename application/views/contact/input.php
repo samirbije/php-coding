@@ -34,25 +34,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="form_title_wrap">
 						<h4 class="typeA">
 							<label for="name">Input A</label>
-							<span class="ico_must">必須</span>
+							<span class="ico_must">Mandatory</span>
 						</h4>
 					</div>
 				
 					<div class="form_group_wrap">
 						<div class="form_group_inner type_postal_code">
 							<div class="form_txt type_name long">
-								<input type="text" name="name" value="<?php echo @$post['name']; ?>" class="zenkaku" data-ime-mode="active"  />								<span class="example">例：株式会社ALLアセットパートナーズ　</span>
+								<input type="text" name="url" value="<?php echo @$post['url']; ?>" class="zenkaku" data-ime-mode="active"  />
+							<span><?php echo validation_errors(); ?></span>
 							</div>
 						</div>
 					</div>
 					<!-- /form_wrap --> 
 				</div>
-				
 				<div class="form_wrap form_error"  data-form-group="message">
 					<div class="form_title_wrap">
 						<h4 class="typeA">
 							<label for="message">Input B</label>
-							<span class="ico_must">必須</span>
 						</h4>
 					</div>
 			
