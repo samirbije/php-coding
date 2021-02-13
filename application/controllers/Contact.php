@@ -55,7 +55,7 @@ class Contact extends CI_Controller {
 		return	$this->load->view('contact/input', $this->_view_data);
 	}
 	/**
-	 * Confirmpage 
+	 * Confirm page 
 	 *
 	 */
 	public function confirm()
@@ -64,15 +64,12 @@ class Contact extends CI_Controller {
 		if ( ! $this->input->post()) {
 			return redirect( base_url('contact/input'));
 		}
-
 		if ( ! $this->form_validation->run('contact')) {
 			return $this->load->view('contact/input', $this->_view_data);
 			
 		}
-		
 		$url = $this->input->post('url'); //'http://www.npr.org/rss/rss.php?id=1001';
 		$feed_array = convertRssToArray($url);
-		
 
 		$replaceTextFrom = 'uzabase';
 		$replaceTextTo = 'Uzabase, Inc.';
@@ -96,10 +93,8 @@ class Contact extends CI_Controller {
 			}
 		}
 
-
-		 $filepath=$this->_upload_dir."/article_".date('Y-m-d').".csv";
-		 arrayToCsv($feed_array,'',$filepath);
-
+		$filepath=$this->_upload_dir."/article_".date('Y-m-d').".csv";
+		arrayToCsv($feed_array,'',$filepath);
 
 		$filepath=$this->_upload_dir."/result_".date('Y-m-d').".csv";
 		arrayToCsv($arrCsv,'',$filepath);
@@ -107,7 +102,10 @@ class Contact extends CI_Controller {
 		return $this->load->view('contact/confirm',$this->_view_data);
 
 	}
-
+	/**
+	 * Download result in  CSV file 
+	 
+	*/
 	public function downloadResult($csv='result'){
 		
 		$filepath = $this->_upload_dir.$csv."_".date('Y-m-d').".csv";
