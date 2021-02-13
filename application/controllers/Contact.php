@@ -36,7 +36,7 @@ class Contact extends CI_Controller {
 	 */
 	public function index()
 	{
-			return redirect ( base_url ( 'contact/input' ));
+		return redirect ( base_url ( 'contact/input' ));
 	}
 	/**
 	 * inputform the 
@@ -71,7 +71,7 @@ class Contact extends CI_Controller {
 		}
 		
 		$url = $this->input->post('url'); //'http://www.npr.org/rss/rss.php?id=1001';
-		$feed_array = convert_rss_array($url);
+		$feed_array = convertRssToArray($url);
 		
 
 		$replaceTextFrom = 'uzabase';
@@ -96,18 +96,19 @@ class Contact extends CI_Controller {
 			}
 		}
 
+
 		 $filepath=$this->_upload_dir."/article_".date('Y-m-d').".csv";
-		 array_to_csv($feed_array,'',$filepath);
+		 arrayToCsv($feed_array,'',$filepath);
 
 
 		$filepath=$this->_upload_dir."/result_".date('Y-m-d').".csv";
-		array_to_csv($arrCsv,'',$filepath);
+		arrayToCsv($arrCsv,'',$filepath);
 		 	
 		return $this->load->view('contact/confirm',$this->_view_data);
 
 	}
 
-	public function downloadArticleFile($csv = 'result'){
+	public function downloadResult($csv='result'){
 		
 		$filepath = $this->_upload_dir.$csv."_".date('Y-m-d').".csv";
 		ob_start();

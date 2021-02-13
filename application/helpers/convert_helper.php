@@ -1,8 +1,9 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-if ( ! function_exists('array_to_csv'))
+if ( ! function_exists('arrayToCsv'))
 {
-    function array_to_csv($array, $download = "", $path ='')
+    function arrayToCsv($array, $download = "", $path ='')
+    
     {
     
         if ($download != "")
@@ -16,7 +17,8 @@ if ( ! function_exists('array_to_csv'))
         $n = 0;        
         foreach ($array as $line)
         {
-            $n++;	
+            $n++;
+		
             if ( ! fputcsv($f, $line))
             {
                 show_error("Can't write line $n: $line");
@@ -33,9 +35,9 @@ if ( ! function_exists('array_to_csv'))
     }
 }
 
-if ( ! function_exists('convert_rss_array')){
+if ( ! function_exists('convertRssToArray')){
 
-    function convert_rss_array($url){
+    function convertRssToArray($url){
 			$feed = new DOMDocument;
 			$feed->load($url);
 			$feed_array = array();

@@ -1,4 +1,4 @@
 
-<a href="<?=base_url("contact/downloadArticleFile/article")?>">Download Rss</a>
+<a href="<?=base_url("contact/downloadResult/article")?>">Download Rss</a>
 <br/>
-<a href="<?=base_url("contact/downloadArticleFile")?>">Download CSV</a>
+<a href="<?=base_url("contact/downloadResult")?>">Download CSV</a>
