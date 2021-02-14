@@ -45,11 +45,11 @@ class Contact extends CI_Controller {
 	public function input(){
 		
 		if($this->session->userdata('post_data')) {
-        // Set POST array from session data
-        $this->_view_data = $this->session->userdata('post_data');
-        // Clear the session
-        $this->session->unset_userdata('post_data');
-    	}
+			// Set POST array from session data
+			$this->_view_data = $this->session->userdata('post_data');
+			// Clear the session
+			$this->session->unset_userdata('post_data');
+    		}
 		// validation
 		$this->form_validation->run('contact');
 		return	$this->load->view('contact/input', $this->_view_data);
@@ -74,8 +74,8 @@ class Contact extends CI_Controller {
 		$replaceTextFrom = 'uzabase';
 		$replaceTextTo = 'Uzabase, Inc.';
 		$config['upload_path']=$this->_upload_dir;
-        $config['allowed_types']='txt|csv';
-        $this->load->library('upload', $config);
+        	$config['allowed_types']='txt|csv';
+        	$this->load->library('upload', $config);
 		$this->upload->do_upload('csv');
 		$arrCsv = array();
 		if($this->upload->do_upload('csv')) {
